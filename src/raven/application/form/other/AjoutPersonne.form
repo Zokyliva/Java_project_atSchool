@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="166" max="-2" attributes="0"/>
+              <Component id="paneladd" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="167" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="paneladd" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="paneladd">
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_CreateCodeCustom" type="java.lang.String" value="new raven.application.form.other.PanelAddPersonne()"/>
+      </AuxValues>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="lbdipl2" alignment="0" min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="lbdipl1" alignment="0" min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="lbmont4" alignment="0" min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="lbmont3" alignment="0" min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="lbmont2" alignment="0" min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="datenais" max="32767" attributes="0"/>
+                      <Component id="lbmont1" min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="lbnum" alignment="0" min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="txtim" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lbdipl" alignment="0" min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="txtnm" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtpn" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lbmont" alignment="0" min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="lbtitre" alignment="0" pref="242" max="32767" attributes="0"/>
+                      <Component id="btnadd" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtcont" alignment="0" max="32767" attributes="0"/>
+                      <Component id="lbcat" alignment="0" min="-2" pref="143" max="-2" attributes="0"/>
+                      <Component id="combodipl" max="32767" attributes="0"/>
+                      <Component id="combostat" alignment="0" max="32767" attributes="0"/>
+                      <Component id="combosit" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtnc" alignment="0" max="32767" attributes="0"/>
+                      <Component id="txtpc" alignment="0" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="125" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbtitre" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="lbnum" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="txtim" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbdipl" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="txtnm" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbcat" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="txtpn" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbmont" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="datenais" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbmont1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="txtcont" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbmont2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="combodipl" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbmont3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="combostat" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbmont4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="combosit" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbdipl1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="txtnc" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lbdipl2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="txtpc" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="16" max="32767" attributes="0"/>
+                  <Component id="btnadd" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lbtitre">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ajouter nouvelle personne"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbdipl">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nom"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtim">
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbcat">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Prenom"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbmont">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Date de naissance"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbnum">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="IM"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtpn">
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtnm">
+        </Component>
+        <Component class="javax.swing.JButton" name="btnadd">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Ajouter"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnaddActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbmont1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Contact"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtcont">
+        </Component>
+        <Component class="com.toedter.calendar.JDateChooser" name="datenais">
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbmont2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Diplome"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="combodipl">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="0"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="combodiplMousePressed"/>
+          </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbmont3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Statut"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="combostat">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="2">
+                <StringItem index="0" value="Vivant"/>
+                <StringItem index="1" value="Decede"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbmont4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Situation"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="combosit">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="3">
+                <StringItem index="0" value="Marie(e)"/>
+                <StringItem index="1" value="Divorce(e)"/>
+                <StringItem index="2" value="Veuve(veuf)"/>
+              </StringArray>
+            </Property>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+          </AuxValues>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtnc">
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbdipl1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Nom du conjoint"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtpc">
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbdipl2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Prenom du conjoint"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>

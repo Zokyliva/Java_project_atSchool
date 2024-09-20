@@ -30,9 +30,9 @@ public class Menu extends JPanel {
         {"~Navigation~"},
         {"Tarif", "Listes", "Ajouter", "Modifier"},
         {"Personnes", "Listes", "Ajouter", "Modifier"},
-        {"Payer", "Listes", "Ajouter", "Modifier"},
+        {"Payer", "Listes", "Ajouter"},
         {"Charts"},
-        {"~OTHER~"},
+        {"~Quit~"},
         {"Logout"}
     };
 
@@ -60,7 +60,7 @@ public class Menu extends JPanel {
 
     private final List<MenuEvent> events = new ArrayList<>();
     private boolean menuFull = true;
-    private final String headerName = "Zoky liva";
+    private final String headerName = "Zoky_liva / Omega";
     
 
     protected final boolean hideMenuTitleOnMinimum = true;

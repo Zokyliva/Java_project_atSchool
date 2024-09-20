@@ -54,7 +54,7 @@ public class ListesTarif extends javax.swing.JPanel {
         btndelete.putClientProperty(FlatClientProperties.STYLE, ""
                 + "borderWidth:0;"
                 + "focusWidth:0");
-        txtsearch.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Recherche");
+        txtsearch.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Recherche diplome");
     }
     
     public void Affichage(){
@@ -178,6 +178,12 @@ public class ListesTarif extends javax.swing.JPanel {
             }
         });
 
+        txtsearch.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyReleased(java.awt.event.KeyEvent evt) {
+                txtsearchKeyReleased(evt);
+            }
+        });
+
         jLabel1.setText("Numero du tarif :");
 
         lbtitre.setText("Listes des tarifs de diplome pour les pensionnaires");
@@ -261,6 +267,41 @@ public class ListesTarif extends javax.swing.JPanel {
             System.out.println(e.getMessage());
         }
     }//GEN-LAST:event_btndeleteActionPerformed
+
+    public void Recherche(){
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Num_tarif");
+        model.addColumn("Diplome");
+        model.addColumn("Categorie");
+        model.addColumn("Montant (ARIARY)");
+        tableTarif.setModel(model);
+        
+        
+        try{
+            
+            String sql = "select * from tarif where diplome like ?";
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, "%"+txtsearch.getText()+"%");
+            
+            rs = ps.executeQuery();
+            while(rs.next()){
+                model.addRow(new Object[]{
+                    rs.getString("num_tarif"),
+                    rs.getString("diplome"),
+                    rs.getString("categorie"),
+                    rs.getString("montant"),
+                });
+            }
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        
+        
+    }
+    
+    private void txtsearchKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtsearchKeyReleased
+        Recherche();
+    }//GEN-LAST:event_txtsearchKeyReleased
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

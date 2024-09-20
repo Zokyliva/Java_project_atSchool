@@ -36,6 +36,16 @@ public class ListesPayerPension extends javax.swing.JPanel {
     ResultSet rs = null;
     PreparedStatement ps = null;
     static String test;
+    
+    java.util.Date datenaiss;
+    java.sql.Date Mydatenaiss;
+    
+    
+    java.util.Date datenaiss1;
+    java.sql.Date Mydatenaiss1;
+    
+    java.util.Date datenaiss2;
+    java.sql.Date Mydatenaiss2;
     /**
      * Creates new form ListesPayerPension
      */
@@ -59,7 +69,9 @@ public class ListesPayerPension extends javax.swing.JPanel {
         btndelete.putClientProperty(FlatClientProperties.STYLE, ""
                 + "borderWidth:0;"
                 + "focusWidth:0");
-        txtsearch.putClientProperty(FlatClientProperties.PLACEHOLDER_TEXT, "Recherche");
+        btnsearch.putClientProperty(FlatClientProperties.STYLE, ""
+                + "borderWidth:0;"
+                + "focusWidth:0");
     }
     
     public void Affichage(){
@@ -117,6 +129,12 @@ public class ListesPayerPension extends javax.swing.JPanel {
 //                String t10 = rs.getString("prenomconjoint");
 //                txtpc.setText(t10);
             }
+            
+            if ("Vivant".equals(txtstat.getText())){
+                Notifications.getInstance().show(Notifications.Type.INFO, Notifications.Location.TOP_RIGHT, ""+ txtnm.getText() +" "+ " " +" "+ txtim.getText() +" est encore vivant alors il touche 100% de sa pension");
+            } else{
+                Notifications.getInstance().show(Notifications.Type.WARNING, Notifications.Location.TOP_RIGHT, ""+ txtnm.getText() +" "+ " " +" "+ txtim.getText() +" est decede alors son conjoint touche 40% de sa pension");
+            }
         }catch(Exception e){
             System.out.println(e.getMessage());
         }
@@ -138,7 +156,6 @@ public class ListesPayerPension extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         btnrecus = new javax.swing.JButton();
         btndelete = new javax.swing.JButton();
-        txtsearch = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         txtim = new javax.swing.JLabel();
         lbtitre = new javax.swing.JLabel();
@@ -155,6 +172,9 @@ public class ListesPayerPension extends javax.swing.JPanel {
         txtnc = new javax.swing.JLabel();
         txtstat = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        date1 = new com.toedter.calendar.JDateChooser();
+        date2 = new com.toedter.calendar.JDateChooser();
+        btnsearch = new javax.swing.JButton();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -212,6 +232,13 @@ public class ListesPayerPension extends javax.swing.JPanel {
 
         jLabel7.setText("Statut :");
 
+        btnsearch.setText("Recherche");
+        btnsearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsearchActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -222,7 +249,11 @@ public class ListesPayerPension extends javax.swing.JPanel {
                         .addContainerGap()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                                .addComponent(txtsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(date1, javax.swing.GroupLayout.PREFERRED_SIZE, 176, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(date2, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btnsearch, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btnrecus)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -246,8 +277,7 @@ public class ListesPayerPension extends javax.swing.JPanel {
                                 .addGap(18, 18, 18)
                                 .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtstat, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
+                                .addComponent(txtstat, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -261,7 +291,8 @@ public class ListesPayerPension extends javax.swing.JPanel {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(txtnc, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtpc, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(txtpc, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -297,10 +328,13 @@ public class ListesPayerPension extends javax.swing.JPanel {
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(txtnc, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtsearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnrecus)
-                    .addComponent(btndelete))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(btnrecus)
+                        .addComponent(btndelete)
+                        .addComponent(btnsearch))
+                    .addComponent(date2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(date1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
         );
 
@@ -486,10 +520,45 @@ public class ListesPayerPension extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btndeleteActionPerformed
 
+    private void btnsearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsearchActionPerformed
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("IM du personne");
+        model.addColumn("numero tarif");
+        model.addColumn("Date du paiement");
+        tablePayer.setModel(model);
+        
+        try{
+            datenaiss1 = date1.getDate();
+            Mydatenaiss1 = new java.sql.Date(datenaiss1.getTime());
+            
+            datenaiss2 = date2.getDate();
+            Mydatenaiss2 = new java.sql.Date(datenaiss2.getTime());
+            
+            String sql = "select * from payer where date between ? and ?";
+            ps = conn.prepareStatement(sql);
+            ps.setDate(1, Mydatenaiss1);
+            ps.setDate(2, Mydatenaiss2);
+            rs = ps.executeQuery();
+            if(rs.next()){
+                model.addRow(new Object[]{
+                    rs.getString("im"),
+                    rs.getString("num_tarif"),
+                    rs.getString("date"),
+                });
+            }
+            
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+    }//GEN-LAST:event_btnsearchActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btndelete;
     private javax.swing.JButton btnrecus;
+    private javax.swing.JButton btnsearch;
+    private com.toedter.calendar.JDateChooser date1;
+    private com.toedter.calendar.JDateChooser date2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -510,7 +579,6 @@ public class ListesPayerPension extends javax.swing.JPanel {
     private javax.swing.JLabel txtnm;
     private javax.swing.JLabel txtpc;
     private javax.swing.JLabel txtpn;
-    private javax.swing.JTextField txtsearch;
     private javax.swing.JLabel txtstat;
     // End of variables declaration//GEN-END:variables
 }

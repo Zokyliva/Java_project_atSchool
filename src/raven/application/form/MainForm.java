@@ -86,7 +86,9 @@ public class MainForm extends JLayeredPane {
                 } catch (IOException ex) {
                     Logger.getLogger(MainForm.class.getName()).log(Level.SEVERE, null, ex);
                 }
-            } else if (index == 1) {
+            }
+//            menu tarif
+            else if (index == 1) {
                 if (subIndex == 1) {
                     try {
                         Application.showForm(new ListesTarif());
@@ -108,7 +110,9 @@ public class MainForm extends JLayeredPane {
                 }else {
                     action.cancel();
                 }
-            } else if (index == 2){
+            }
+//            menu personnes
+            else if (index == 2){
                 if (subIndex == 1) {
                     try {
                         Application.showForm(new ListesPersonnes());
@@ -131,7 +135,9 @@ public class MainForm extends JLayeredPane {
                     action.cancel();
                 }
                 
-            } else if(index == 3){
+            }
+//            menu payer
+            else if(index == 3){
                 if(subIndex == 1) {
                     try {
                         Application.showForm(new ListesPayerPension());
@@ -145,10 +151,12 @@ public class MainForm extends JLayeredPane {
                         Logger.getLogger(MainForm.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
-            } else if(index == 4){
+            } 
+//            menu histo
+            else if(index == 4){
                 Application.showForm(new Histogramme());
             }
-            
+//            menu quitter
             else if (index == 5) {
                 Application.logout();
             } else {

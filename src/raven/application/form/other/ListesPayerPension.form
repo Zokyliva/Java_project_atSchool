@@ -82,7 +82,11 @@
                                   <EmptySpace max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Group type="102" alignment="1" attributes="0">
-                                          <Component id="txtsearch" min="-2" pref="177" max="-2" attributes="0"/>
+                                          <Component id="date1" min="-2" pref="176" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="date2" min="-2" pref="167" max="-2" attributes="0"/>
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="btnsearch" min="-2" pref="102" max="-2" attributes="0"/>
                                           <EmptySpace max="32767" attributes="0"/>
                                           <Component id="btnrecus" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
@@ -177,10 +181,14 @@
                               </Group>
                           </Group>
                           <EmptySpace pref="8" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="txtsearch" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btnrecus" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="btndelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="1" groupAlignment="3" attributes="0">
+                                  <Component id="btnrecus" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btndelete" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnsearch" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="date2" alignment="1" min="-2" max="-2" attributes="0"/>
+                              <Component id="date1" alignment="1" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
@@ -203,8 +211,6 @@
                   <Events>
                     <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btndeleteActionPerformed"/>
                   </Events>
-                </Component>
-                <Component class="javax.swing.JTextField" name="txtsearch">
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel1">
                   <Properties>
@@ -261,6 +267,18 @@
                   <Properties>
                     <Property name="text" type="java.lang.String" value="Statut :"/>
                   </Properties>
+                </Component>
+                <Component class="com.toedter.calendar.JDateChooser" name="date1">
+                </Component>
+                <Component class="com.toedter.calendar.JDateChooser" name="date2">
+                </Component>
+                <Component class="javax.swing.JButton" name="btnsearch">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="Recherche"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnsearchActionPerformed"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

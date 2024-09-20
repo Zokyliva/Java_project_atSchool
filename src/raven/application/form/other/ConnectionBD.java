@@ -19,7 +19,7 @@ public class ConnectionBD {
     Connection conn = null;
     public static Connection connect() throws FileNotFoundException, IOException{
         Properties props = new Properties();
-        try (FileInputStream input = new FileInputStream("config.properties")) {
+        try (FileInputStream input = new FileInputStream("C:\\Users\\Zoky_liva\\Downloads\\Compressed\\flatlaf-dashboard-main\\config.properties")) {
             props.load(input);
             
             String url = props.getProperty("db.url");
